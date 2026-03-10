@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/', // Strictly use root for Vercel
+  base: '/portfolio-sakeel/', 
 })
