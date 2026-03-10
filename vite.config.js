@@ -1,8 +1,8 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  // This says: if we're on GitHub Pages, use the subfolder, otherwise use the root.
-  base: process.env.NODE_ENV === 'production' ? '/portfolio-sakeel/' : '/',
   plugins: [react()],
-});
+  // This tells Vite: use a subfolder for GitHub, but root for Vercel
+  base: process.env.VERCEL ? '/' : '/portfolio-sakeel/',
+})
